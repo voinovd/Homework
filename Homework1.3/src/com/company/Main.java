@@ -8,7 +8,7 @@ public class Main {
         System.out.println(s);
         String s1=sc.nextLine();
         sc.close();
-        if( ) {
+        if(s.contains(s1)) {
             System.out.println("Содержит");
         }
 
