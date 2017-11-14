@@ -13,7 +13,8 @@ public class Main {
             System.out.print(array[i] + " ");
         }
 
-        float[] newarray = new float[10];
+        float[] newarray;
+        newarray = new float[10];
         Random newrand = new Random();
         int newmax = 75;
         int newmin = 25;
