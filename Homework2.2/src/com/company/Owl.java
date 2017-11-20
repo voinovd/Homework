@@ -5,8 +5,6 @@ public class Owl {
     private int age;
     private String breed;
 
-    public Owl(){}
-
     public String getName() { return name; }
 
     public void setName(String name) { this.name = name; }
