@@ -1,13 +1,22 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Discipline {
     private String name;
     private int complexity;
 
+    private static List<Discipline> disciplineList = new ArrayList<Discipline>();
+
     public Discipline() {
+        disciplineList.add(this);
     }
+
+    public static List<Discipline> getDisciplineList() {
+        return disciplineList;
+    }
+
     public String getName() {
         return name;
     }

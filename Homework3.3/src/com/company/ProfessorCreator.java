@@ -7,16 +7,15 @@ import java.util.List;
 import static com.company.Main.getDisciplinesByNames;
 
 public class ProfessorCreator {
-    public List<Professor> create() {
+    public static List<Professor> create() {
         List<Professor> professors = new ArrayList<>();
 
         Professor einstein = new Professor();
         einstein.setName("Albert Einstein");
         einstein.setAge(75);
 
-        List<Discipline> disciplines = null;
         List<Discipline> einsteinDisciplineList = getDisciplinesByNames(
-                disciplines,
+                Discipline.getDisciplineList(),
                 Arrays.asList("Math", "Computer science")
         );
         einstein.setDisciplines(einsteinDisciplineList);
@@ -29,7 +28,7 @@ public class ProfessorCreator {
         picasso.setAge(50);
 
         List<Discipline> picassoDisciplineList = getDisciplinesByNames(
-                disciplines,
+                Discipline.getDisciplineList(),
                 Arrays.asList("Art")
         );
         picasso.setDisciplines(picassoDisciplineList);

@@ -7,9 +7,7 @@ import java.util.List;
 import static com.company.Main.getDisciplinesByNames;
 
 public class StudentCreator {
-    public List<Discipline> disciplines;
-
-    public List<Student> create() {
+    public static List<Student> create() {
         List<Student> students = new ArrayList<>();
 
         Student alex = new Student();
@@ -17,7 +15,7 @@ public class StudentCreator {
         alex.setSource(3);
 
         List<Discipline> alexDisciplineList = getDisciplinesByNames(
-                disciplines,
+                Discipline.getDisciplineList(),
                 Arrays.asList("Math", "Biology")
         );
         alex.setDisciplines(alexDisciplineList);
@@ -30,7 +28,7 @@ public class StudentCreator {
         mary.setSource(1);
 
         List<Discipline> maryDisciplineList = getDisciplinesByNames(
-                disciplines,
+                Discipline.getDisciplineList(),
                 Arrays.asList("Art")
         );
         mary.setDisciplines(maryDisciplineList);
@@ -43,7 +41,7 @@ public class StudentCreator {
         sam.setSource(6);
 
         List<Discipline> samDisciplineList = getDisciplinesByNames(
-                disciplines,
+                Discipline.getDisciplineList(),
                 Arrays.asList("Math", "Computer science")
         );
         sam.setDisciplines(samDisciplineList);

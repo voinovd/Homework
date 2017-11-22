@@ -11,23 +11,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        DisciplineCreator disciplineCreator = new DisciplineCreator();
-        List<Discipline> disciplines = disciplineCreator.create();
-        ProfessorCreator professorCreator = new ProfessorCreator();
-        List<Professor> professors = professorCreator.create();
-        StudentCreator studentCreator = new StudentCreator();
-        List<Student> students = studentCreator.create();
+
+        DisciplineCreator.create();
+        ProfessorCreator.create();
+        StudentCreator.create();
+
+        System.out.println(Discipline.getDisciplineList().size());
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 
             System.out.println("Enter studentName");
             String studentName = br.readLine();
-            Student studentFromConsole = getStudentByName(studentName, students);
+            Student studentFromConsole = getStudentByName(studentName, Student.getStudentList());
             studentFromConsole.learn();
 
             System.out.println("Enter professorName");
             String professorName = br.readLine();
-            Professor professorFromConsole = getProfessorByName(professorName, professors);
+            Professor professorFromConsole = getProfessorByName(professorName, Professor.getProfessorList());
             professorFromConsole.teach();
 
         } catch ( IOException e){

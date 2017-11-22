@@ -1,8 +1,19 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student extends Person  {
-    public Student() {
+    private static List<Student> studentList = new ArrayList<Student>();
+
+    public Student(){
+        studentList.add(this);
     }
+
+    public static List<Student> getStudentList() {
+        return studentList;
+    }
+
     private int source;
 
     public int getSource() {

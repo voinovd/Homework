@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DisciplineCreator {
-    public List<Discipline> create(){
+    public static  List<Discipline> create(){
         List<Discipline> disciplines = new ArrayList<>();
 
         Discipline math = new Discipline();
